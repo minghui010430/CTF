@@ -96,21 +96,29 @@ don't worry no one will get here, it's safe to share with you my access. Its enc
 ===========================================================
 ![](img/提權2/查看係統版本.png)
 - 利用uname -a 查詢係統版本
+
 ![](img/提權2/searchsploit.png)
 - 利用searchsploit 尋找該版本對應的弱點提權腳本
 - 其中50808.c就直接寫明它能夠提權
+
 ![](img/提權2/上傳檔案.png)
 - 將50808.c直接上傳到server上
+
 ![](img/提權2/使用reverse bash.png)
 - 利用reverse bash反向連線
+
 ![](img/提權2/netcat 連線.png)
 - 利用nc連接到伺服器
 - 將50808.c製作出執行檔，但是伺服器並沒有gcc功能
+
 ![](img/提權2/製作執行檔.png)
 - 在主機端製作執行檔並將它上傳
+
 ![](img/提權2/提升執行檔執行的權限.png)
 - 到/tmp 目錄上，執行shell執行檔，但是權限不足
 - 利用chmod提升執行權限
+
 ![](img/提權2/取得權限.png)
+
 - 執行後，利用***python3 -c 'import pty; pty.spawn("/bin/bash")'*** 升級至互動式的shell
 - 升級後，就能得知自己是root
